@@ -25,10 +25,9 @@ function Create() {
     if (form.prompt) {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/v1/dalle",{ prompt: form.prompt }
+          "https://imageai-bibr.onrender.com/api/v1/dalle",{ prompt: form.prompt }
         );
         const image_url = response.data.photo;
-        // const image_url='https://via.placeholder.com/250x250'
         setForm({ ...form, photo: image_url });
         setLoading(false);
       } catch (error) {
@@ -44,7 +43,7 @@ function Create() {
   const handleShare = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/v1/post", form);
+      await axios.post("https://imageai-bibr.onrender.com/api/v1/post", form);
       navigate("/");
     } catch (error) {
       console.log("COMMUNITY SHARE ERROR: ", error);

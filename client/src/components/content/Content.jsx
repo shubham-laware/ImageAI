@@ -15,7 +15,7 @@ function Content() {
     try {
 
       setLoading(true)
-      const response = await axios.get('http://localhost:3000/api/v1/post/getPosts');
+      const response = await axios.get('https://imageai-bibr.onrender.com/api/v1/post/getPosts');
       
       if(response.status===200){
       setPosts(response.data.reverse());
