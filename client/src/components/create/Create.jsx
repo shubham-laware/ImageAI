@@ -14,6 +14,7 @@ function Create() {
 
   const [loading, setLoading] = useState(false);
   const [sharing,setSharing]=useState(false)
+  const [opeationProgress,setOperationProgress]=useState(false)
 
 
   const handleChange = (e) => {
@@ -45,9 +46,11 @@ function Create() {
     e.preventDefault();
     try {
       setSharing(true)
+      setOperationProgress(true)
       await axios.post("https://imageai-bibr.onrender.com/api/v1/post", form);
       navigate("/");
       setSharing(false)
+      setOperationProgress(false)
     } catch (error) {
       console.log("COMMUNITY SHARE ERROR: ", error);
     }
@@ -130,6 +133,7 @@ function Create() {
           <button
             className="border border-solid border-gray-300 h-[40px] text-sm w-[250px] rounded-md hover:bg-gray-200 hover:text-black text-white  "
             type="submit"
+            disabled={opeationProgress}
           >
             Share with the Community 
           </button>
