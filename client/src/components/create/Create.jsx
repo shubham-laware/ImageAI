@@ -131,12 +131,13 @@ function Create() {
             className="border border-solid border-gray-300 h-[40px] text-sm w-[250px] rounded-md hover:bg-gray-200 hover:text-black text-white  "
             type="submit"
           >
-            Share with the Community <span> {sharing ? (
+            Share with the Community 
+          </button>
+          <span> {sharing ? (
               <p>Sharing...</p>
             ):(
               <></>
             )} </span>
-          </button>
         </div>
         <div className=" text-sm text-gray-500 mt-2">
           NOTE: If the image is not generated don't be upset, as the FREE TIER service has been used for this.
