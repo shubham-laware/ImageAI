@@ -44,7 +44,6 @@ router.route('/').post(async(req,res)=>{
     }else{
         res.status(400).json({ error: 'Photo is required' })
     }
-    console.log(formData)
     } catch (error) {
         console.log('POST ROUTES ERROR : ',error)
     }
