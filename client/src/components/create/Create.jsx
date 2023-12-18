@@ -133,7 +133,7 @@ function Create() {
           >
             Share with the Community 
           </button>
-          <span className="text-gray-300"> {sharing ? (
+          <span className="text-gray-300 mt-2"> {sharing ? (
               <p>Sharing...</p>
             ):(
               <></>
